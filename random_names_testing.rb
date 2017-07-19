@@ -11,9 +11,16 @@ class Random_pairs_test < Minitest::Test
     # end
 
     def test_for_2_names 
-        my_name = ["billy"]
-        my_people = [["anthony"], ["gritts"], ["jim"], ["bobo"]]
+        my_name = "billy"
+        my_people = ["anthony", "gritts", "jim", "bobo"]
         assert_equal(true, random_name(my_name, my_people))
     end
+
+    def test_for_a_large_number_of_names
+        my_name = "billy"
+        my_people = ["anthony", "gritts", "jack", "jim", "bobo", "dale", "poblo", "ash", "misty"]
+        assert_equal(true, names_at_random(my_name, my_people))
+    end
+    
     
 end
